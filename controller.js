@@ -7,15 +7,15 @@ function($scope, $location, $timeout, GeneratorService) {
   $scope.p.fb = 0;
   var i;
   for (i = 0; i < 4; i++) {
-    $scope.p['op' + i + 'ar'] = 0;
-    $scope.p['op' + i + 'dr'] = 0;
-    $scope.p['op' + i + 'sr'] = 0;
-    $scope.p['op' + i + 'rr'] = 0;
+    $scope.p['op' + i + 'ar'] = 9;
+    $scope.p['op' + i + 'dr'] = 1;
+    $scope.p['op' + i + 'sr'] = 1;
+    $scope.p['op' + i + 'rr'] = 1;
     $scope.p['op' + i + 'sl'] = 0;
     $scope.p['op' + i + 'tl'] = 0;
     $scope.p['op' + i + 'ks'] = 0;
-    $scope.p['op' + i + 'mul'] = 0;
-    $scope.p['op' + i + 'dt1'] = 0;
+    $scope.p['op' + i + 'mul'] = 1;
+    $scope.p['op' + i + 'dt1'] = 4;
     $scope.p['op' + i + 'dt2'] = 0;
     $scope.p['op' + i + 'ams'] = 0;
   }
