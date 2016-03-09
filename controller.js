@@ -7,7 +7,7 @@ function($scope, $location, $timeout, GeneratorService) {
   $scope.p.fb = 0;
   var i;
   for (i = 0; i < 4; i++) {
-    $scope.p['op' + i + 'ar'] = 4;
+    $scope.p['op' + i + 'ar'] = 12;
     $scope.p['op' + i + 'dr'] = 4;
     $scope.p['op' + i + 'sr'] = 4;
     $scope.p['op' + i + 'rr'] = 4;
