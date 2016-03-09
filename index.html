@@ -359,6 +359,14 @@
       </div>
 
       <hr>
+          <span>プレビューフレーズ</span>
+          <br/>
+          <textarea cols="80" rows="1"
+            ng-model="p.previewPhrase"
+            placeholder="プレビューフレーズ"
+            ng-change="generate()" ng-blur="generate()"
+          ></textarea>
+      <hr>
           <span>MML生成結果</span>
           <br/>
           <textarea cols="80" rows="6"

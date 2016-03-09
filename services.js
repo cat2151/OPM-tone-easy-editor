@@ -23,7 +23,7 @@ function() {
       s += '\n';
     }
     s += '};';
-    s += '%6@0 cde;';
+    s += '%6@0' + p.previewPhrase;
     return s;
   }
 

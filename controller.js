@@ -20,6 +20,7 @@ function($scope, $location, $timeout, GeneratorService) {
     $scope.p['op' + i + 'ams'] = 0;
   }
   $scope.p.op3tl = 0;
+  $scope.p.previewPhrase = 'cde';
 
   function createRadios(min, max, step) {
     var radios = [];
@@ -52,7 +53,7 @@ function($scope, $location, $timeout, GeneratorService) {
   };
 
   $scope.play = function() {
-    // TODO (優先度低)generatedMmlから$scope.pへの反映。音色設定MMLのパースが必要
+    // TODO (優先度低)generatedMmlから$scope.pへの反映と、$scope.p.previewPhraseへの反映。
     SIOPM.compile($scope.generatedMml);
   }
 
