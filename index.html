@@ -1,0 +1,388 @@
+<!doctype html>
+<html ng-app="generatorApp">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="services.js"></script>
+    <script src="controller.js"></script>
+    <script type='text/javascript' src='jquery.js'></script>
+    <script type='text/javascript' src='siopm.js'></script>
+
+    <title>OPM音色エディタ（簡易）</title>
+  </head>
+  <body>
+    <div ng-controller="generatorController">
+      <div>
+        <span>ラジオボタンを押すと、OPM音色を生成して演奏します</span>
+        <br/>
+        <span>開発中</span>
+        <br/>
+
+        <hr>
+
+          <span>ALG</span>
+          <span ng-repeat="r in algRadios">
+            <label>
+              <input type="radio" ng-model="p.alg" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+
+          <span>FB</span>
+          <span ng-repeat="r in fbRadios">
+            <label>
+              <input type="radio" ng-model="p.fb" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+
+          <span>AR</span>
+          <span ng-repeat="r in arRadios">
+            <label>
+              <input type="radio" ng-model="p.op0ar" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>AR</span>
+          <span ng-repeat="r in arRadios">
+            <label>
+              <input type="radio" ng-model="p.op1ar" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>AR</span>
+          <span ng-repeat="r in arRadios">
+            <label>
+              <input type="radio" ng-model="p.op2ar" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>AR</span>
+          <span ng-repeat="r in arRadios">
+            <label>
+              <input type="radio" ng-model="p.op3ar" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+
+          <span>DR</span>
+          <span ng-repeat="r in drRadios">
+            <label>
+              <input type="radio" ng-model="p.op0dr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>DR</span>
+          <span ng-repeat="r in drRadios">
+            <label>
+              <input type="radio" ng-model="p.op1dr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>DR</span>
+          <span ng-repeat="r in drRadios">
+            <label>
+              <input type="radio" ng-model="p.op2dr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>DR</span>
+          <span ng-repeat="r in drRadios">
+            <label>
+              <input type="radio" ng-model="p.op3dr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+
+          <span>SR</span>
+          <span ng-repeat="r in srRadios">
+            <label>
+              <input type="radio" ng-model="p.op0sr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>SR</span>
+          <span ng-repeat="r in srRadios">
+            <label>
+              <input type="radio" ng-model="p.op1sr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>SR</span>
+          <span ng-repeat="r in srRadios">
+            <label>
+              <input type="radio" ng-model="p.op2sr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>SR</span>
+          <span ng-repeat="r in srRadios">
+            <label>
+              <input type="radio" ng-model="p.op3sr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+
+          <span>RR</span>
+          <span ng-repeat="r in rrRadios">
+            <label>
+              <input type="radio" ng-model="p.op0rr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>RR</span>
+          <span ng-repeat="r in rrRadios">
+            <label>
+              <input type="radio" ng-model="p.op1rr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>RR</span>
+          <span ng-repeat="r in rrRadios">
+            <label>
+              <input type="radio" ng-model="p.op2rr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>RR</span>
+          <span ng-repeat="r in rrRadios">
+            <label>
+              <input type="radio" ng-model="p.op3rr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+
+          <span>SL</span>
+          <span ng-repeat="r in slRadios">
+            <label>
+              <input type="radio" ng-model="p.op0sl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>SL</span>
+          <span ng-repeat="r in slRadios">
+            <label>
+              <input type="radio" ng-model="p.op1sl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>SL</span>
+          <span ng-repeat="r in slRadios">
+            <label>
+              <input type="radio" ng-model="p.op2sl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>SL</span>
+          <span ng-repeat="r in slRadios">
+            <label>
+              <input type="radio" ng-model="p.op3sl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+
+          <span>TL</span>
+          <span ng-repeat="r in tlRadios">
+            <label>
+              <input type="radio" ng-model="p.op0tl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>TL</span>
+          <span ng-repeat="r in tlRadios">
+            <label>
+              <input type="radio" ng-model="p.op1tl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>TL</span>
+          <span ng-repeat="r in tlRadios">
+            <label>
+              <input type="radio" ng-model="p.op2tl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>TL</span>
+          <span ng-repeat="r in tlRadios">
+            <label>
+              <input type="radio" ng-model="p.op3tl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+
+          <span>KS</span>
+          <span ng-repeat="r in ksRadios">
+            <label>
+              <input type="radio" ng-model="p.op0ks" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>KS</span>
+          <span ng-repeat="r in ksRadios">
+            <label>
+              <input type="radio" ng-model="p.op1ks" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>KS</span>
+          <span ng-repeat="r in ksRadios">
+            <label>
+              <input type="radio" ng-model="p.op2ks" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>KS</span>
+          <span ng-repeat="r in ksRadios">
+            <label>
+              <input type="radio" ng-model="p.op3ks" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+
+          <span>MUL</span>
+          <span ng-repeat="r in mulRadios">
+            <label>
+              <input type="radio" ng-model="p.op0mul" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>MUL</span>
+          <span ng-repeat="r in mulRadios">
+            <label>
+              <input type="radio" ng-model="p.op1mul" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>MUL</span>
+          <span ng-repeat="r in mulRadios">
+            <label>
+              <input type="radio" ng-model="p.op2mul" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>MUL</span>
+          <span ng-repeat="r in mulRadios">
+            <label>
+              <input type="radio" ng-model="p.op3mul" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+
+          <span>DT1</span>
+          <span ng-repeat="r in dt1Radios">
+            <label>
+              <input type="radio" ng-model="p.op0dt1" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>DT1</span>
+          <span ng-repeat="r in dt1Radios">
+            <label>
+              <input type="radio" ng-model="p.op1dt1" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>DT1</span>
+          <span ng-repeat="r in dt1Radios">
+            <label>
+              <input type="radio" ng-model="p.op2dt1" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>DT1</span>
+          <span ng-repeat="r in dt1Radios">
+            <label>
+              <input type="radio" ng-model="p.op3dt1" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+
+          <span>DT2</span>
+          <span ng-repeat="r in dt2Radios">
+            <label>
+              <input type="radio" ng-model="p.op0dt2" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>DT2</span>
+          <span ng-repeat="r in dt2Radios">
+            <label>
+              <input type="radio" ng-model="p.op1dt2" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>DT2</span>
+          <span ng-repeat="r in dt2Radios">
+            <label>
+              <input type="radio" ng-model="p.op2dt2" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>DT2</span>
+          <span ng-repeat="r in dt2Radios">
+            <label>
+              <input type="radio" ng-model="p.op3dt2" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+
+          <span>AMS</span>
+          <span ng-repeat="r in amsRadios">
+            <label>
+              <input type="radio" ng-model="p.op0ams" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>AMS</span>
+          <span ng-repeat="r in amsRadios">
+            <label>
+              <input type="radio" ng-model="p.op1ams" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>AMS</span>
+          <span ng-repeat="r in amsRadios">
+            <label>
+              <input type="radio" ng-model="p.op2ams" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+          <span>AMS</span>
+          <span ng-repeat="r in amsRadios">
+            <label>
+              <input type="radio" ng-model="p.op3ams" ng-change="generate()" value="{{r.id}}">{{r.name}}
+            </label>
+          </span>
+          <br/>
+
+      </div>
+
+      <hr>
+          <span>MML生成結果</span>
+          <br/>
+          <textarea cols="80" rows="6"
+            ng-model="generatedMml"
+            placeholder="MML生成結果"
+            ng-change="generate()" ng-blur="generate()"
+          ></textarea>
+      <hr>
+
+      <div>
+        <a href="http://app.16dimensional.com/stadon/">すたどんたん</a>
+      </div>
+      <br/>
+      <div>
+        <a href="https://github.com/cat2151/MML-chord-generator/issues/13">音が途切れた場合はchromeを試すといいかも</a>
+      </div>
+      <br/>
+      <div>
+        <a href="https://github.com/cat2151/OPM-tone-easy-editor/">ソースファイル githubリポジトリ</a>
+      </div>
+      <br/>
+      <div>
+        <a href="https://github.com/keim/SiON/">Powered by SiON</a>
+      </div>
+    </div>
+  </body>
+</html>
