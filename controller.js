@@ -12,13 +12,14 @@ function($scope, $location, $timeout, GeneratorService) {
     $scope.p['op' + i + 'sr'] = 4;
     $scope.p['op' + i + 'rr'] = 4;
     $scope.p['op' + i + 'sl'] = 0;
-    $scope.p['op' + i + 'tl'] = 0;
+    $scope.p['op' + i + 'tl'] = 32;
     $scope.p['op' + i + 'ks'] = 0;
     $scope.p['op' + i + 'mul'] = 1;
     $scope.p['op' + i + 'dt1'] = 4;
     $scope.p['op' + i + 'dt2'] = 0;
     $scope.p['op' + i + 'ams'] = 0;
   }
+  $scope.p.op3tl = 0;
 
   function createRadios(min, max, step) {
     var radios = [];
