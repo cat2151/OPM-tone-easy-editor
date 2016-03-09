@@ -13,5 +13,8 @@ GUIの洗練は後回し。
 
 そのためには編集の自由度を犠牲にしてもよい。そこは自由なエディタが他にもあればフォローできるので。
 
+# Flashについて
+演奏にFlashを使っているので、Flash非対応ブラウザの場合は音が鳴りません
+
 -
 Powered by SiON https://github.com/keim/SiON
