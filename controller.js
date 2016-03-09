@@ -47,18 +47,18 @@ function($scope, $location, $timeout, GeneratorService) {
 
   $scope.generate = function() {
     $scope.generatedMml = GeneratorService.generate($scope.p);
-    console.log($scope.generatedMml);
+    //console.log($scope.generatedMml);
     SIOPM.compile($scope.generatedMml);
   };
 
+  $scope.play = function() {
+    // TODO (優先度低)generatedMmlから$scope.pへの反映。音色設定MMLのパースが必要
+    SIOPM.compile($scope.generatedMml);
+  }
+
   SIOPM.onLoad = function() {
-  return;
-  //TODO 追々やるつもり
-    if (angular.isString($scope.p.inputText)) {
-      $timeout(function() {
-        $scope.generate();
-      }, 0);
-    }
+    // TODO 追々、chordGen同様パラメータ入出力を実装するつもり
+    return;
   };
 
   SIOPM.onCompileComplete = function() {
