@@ -17,6 +17,9 @@
     input.n2 {
     width: 22px;
     }
+    label.tl {
+    background-color: #DDEEDD;
+    }
     </style>
 
     <title>OPM音色エディタ</title>
@@ -192,28 +195,28 @@
 
           <span>TL OP1 <input type="text" ng-model="p.ed.op0tl" ng-change="generate()" class="n2"></span>
           <span ng-repeat="r in tlRadios">
-            <label>
+            <label class="tl">
               <input type="radio" ng-model="p.ed.op0tl" ng-change="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
           <span>TL OP2 <input type="text" ng-model="p.ed.op1tl" ng-change="generate()" class="n2"></span>
           <span ng-repeat="r in tlRadios">
-            <label>
+            <label class="tl">
               <input type="radio" ng-model="p.ed.op1tl" ng-change="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
           <span>TL OP3 <input type="text" ng-model="p.ed.op2tl" ng-change="generate()" class="n2"></span>
           <span ng-repeat="r in tlRadios">
-            <label>
+            <label class="tl">
               <input type="radio" ng-model="p.ed.op2tl" ng-change="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
           <span>TL OP4 <input type="text" ng-model="p.ed.op3tl" ng-change="generate()" class="n2"></span>
           <span ng-repeat="r in tlRadios">
-            <label>
+            <label class="tl">
               <input type="radio" ng-model="p.ed.op3tl" ng-change="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
