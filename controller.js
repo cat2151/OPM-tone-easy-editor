@@ -56,6 +56,9 @@ function($scope, $location, $timeout, GeneratorService) {
     } else {
       angular.copy($scope.p.ed, $scope.p.tone2);
     }
+    $timeout(function() { // compileより前にする(compileがSIOPMロード失敗の為にundefinedでexceptionになっても、先にURLへの反映はしておく)
+      setParamsToUrlFromScope();
+    }, 0);
     $scope.generatedMml = GeneratorService.generate($scope.p.ed);
     //console.log($scope.generatedMml);
     SIOPM.compile($scope.generatedMml);
@@ -75,9 +78,50 @@ function($scope, $location, $timeout, GeneratorService) {
     SIOPM.compile($scope.generatedMml);
   }
 
+
+  // URLから取得 [用途] URLだけでMMLを受け取れるようにする
+  function setParamsToScopeFromUrl() {
+    var p = getDecompressedParamsFromUrl();
+    if (p) {
+      $scope.p = p;
+    }
+  }
+  // URLに反映 [用途] 書いたMMLをURLコピペで共有できるようにする
+  function setParamsToUrlFromScope() {
+    $location.search({
+      p: getCompressedParamsForUrl()
+    });
+  }
+  // [イメージ] $scope.p「aaa」→ URL「～/#?p=bbb」(bbbはlzbase62エンコードされた文字列)
+  function getCompressedParamsForUrl() {
+    return lzbase62.compress(JSON.stringify($scope.p));
+  }
+  // [イメージ] URL「～/#?p=bbb」(bbbはlzbase62エンコードされた文字列) → $scope.p
+  function getDecompressedParamsFromUrl() {
+    var paramFromUrl = $location.search().p;
+    if (!paramFromUrl) return undefined;
+    return JSON.parse(lzbase62.decompress(paramFromUrl));
+  }
+
+
+  $scope.openTweet = function() {
+    var twUrl = "https://twitter.com/intent/tweet?";
+    var prms = "";
+    prms += "hashtags=" + "opmtone";
+    prms += "&text=" +
+      encodeURIComponent("♪OPM音色♪ " +
+        window.location.href
+      );
+    window.open(twUrl + prms, "", "scrollbars=yes,width=500,height=300");
+  };
+
+
   SIOPM.onLoad = function() {
-    // TODO 追々、chordGen同様パラメータ入出力を実装するつもり
-    return;
+    if (angular.isString($scope.ed.previewPhrase)) {
+      $timeout(function() {
+        $scope.generate();
+      }, 0);
+    }
   };
 
   SIOPM.onCompileComplete = function() {
@@ -86,7 +130,8 @@ function($scope, $location, $timeout, GeneratorService) {
 
   SIOPM.initialize(); // [前提] SIOPMのプロパティへ各functionを代入し終わっていること
   $timeout(function() {
-//TODO 追々やるつもり    setParamsFromUrl(); // [前提] $scopeのプロパティへ各functionを代入し終わっていること
+    setParamsToScopeFromUrl(); // [前提] $scopeのプロパティへ各functionを代入し終わっていること
   }, 0);
+
 
 }]);

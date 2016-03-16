@@ -8,6 +8,7 @@
     <script src="controller.js"></script>
     <script type='text/javascript' src='jquery.js'></script>
     <script type='text/javascript' src='siopm.js'></script>
+    <script type='text/javascript' src='lzbase62.min.js'></script>
 
     <style type="text/css">
     input.n1 {
@@ -18,14 +19,12 @@
     }
     </style>
 
-    <title>OPM音色エディタ（簡易）</title>
+    <title>OPM音色エディタ</title>
   </head>
   <body>
     <div ng-controller="generatorController">
       <div>
-        <span>ラジオボタンを押すと、OPM音色を生成して演奏します</span>
-        <br/>
-        <span>開発中</span>
+        <span>OPM音色エディタ</span>
         <br/>
 
         <hr>
@@ -392,6 +391,11 @@
             placeholder="MML生成結果"
             ng-change="play()" ng-blur="play()"
           ></textarea>
+      <hr>
+        <br/>
+        <button ng-click='openTweet()'>ツイートする</button>
+        <br/>
+        <br/>
       <hr>
 
       <div>
