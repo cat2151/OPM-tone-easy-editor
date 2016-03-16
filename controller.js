@@ -2,25 +2,29 @@ angular.module('generatorApp')
 .controller('generatorController', ['$scope', '$location', '$timeout', 'GeneratorService',
 function($scope, $location, $timeout, GeneratorService) {
 
-  $scope.p = {};
-  $scope.p.alg = 0;
-  $scope.p.fb = 0;
+  $scope.p = {ed: {}, tone1: {}, tone2: {}};
+  $scope.p.targetToneNum = 0; // [補足] ed配下にはしない。edとtone1とtone2とのやりとりで更新されないようにする為
+  $scope.p.ed.alg = 0;
+  $scope.p.ed.alg = 0;
+  $scope.p.ed.fb = 0;
   var i;
   for (i = 0; i < 4; i++) {
-    $scope.p['op' + i + 'ar'] = 12;
-    $scope.p['op' + i + 'dr'] = 4;
-    $scope.p['op' + i + 'sr'] = 4;
-    $scope.p['op' + i + 'rr'] = 4;
-    $scope.p['op' + i + 'sl'] = 0;
-    $scope.p['op' + i + 'tl'] = 32;
-    $scope.p['op' + i + 'ks'] = 0;
-    $scope.p['op' + i + 'mul'] = 1;
-    $scope.p['op' + i + 'dt1'] = 4;
-    $scope.p['op' + i + 'dt2'] = 0;
-    $scope.p['op' + i + 'ams'] = 0;
+    $scope.p.ed['op' + i + 'ar'] = 12;
+    $scope.p.ed['op' + i + 'dr'] = 4;
+    $scope.p.ed['op' + i + 'sr'] = 4;
+    $scope.p.ed['op' + i + 'rr'] = 4;
+    $scope.p.ed['op' + i + 'sl'] = 0;
+    $scope.p.ed['op' + i + 'tl'] = 32;
+    $scope.p.ed['op' + i + 'ks'] = 0;
+    $scope.p.ed['op' + i + 'mul'] = 1;
+    $scope.p.ed['op' + i + 'dt1'] = 4;
+    $scope.p.ed['op' + i + 'dt2'] = 0;
+    $scope.p.ed['op' + i + 'ams'] = 0;
   }
-  $scope.p.op3tl = 0;
-  $scope.p.previewPhrase = 'cde';
+  $scope.p.ed.op3tl = 0;
+  $scope.p.ed.previewPhrase = 'cde';
+  angular.copy($scope.p.ed, $scope.p.tone1);
+  angular.copy($scope.p.ed, $scope.p.tone2);
 
   function createRadios(min, max, step) {
     var radios = [];
@@ -47,13 +51,27 @@ function($scope, $location, $timeout, GeneratorService) {
   $scope.amsRadios = createRadios(0, 3, 1);
 
   $scope.generate = function() {
-    $scope.generatedMml = GeneratorService.generate($scope.p);
+    if ($scope.p.targetToneNum == 0) { // for URL
+      angular.copy($scope.p.ed, $scope.p.tone1);
+    } else {
+      angular.copy($scope.p.ed, $scope.p.tone2);
+    }
+    $scope.generatedMml = GeneratorService.generate($scope.p.ed);
     //console.log($scope.generatedMml);
     SIOPM.compile($scope.generatedMml);
   };
 
+  $scope.changeTargetToneNum = function() {
+    if ($scope.p.targetToneNum == 0) { // 保存データから読み込み
+      angular.copy($scope.p.tone1, $scope.p.ed);
+    } else {
+      angular.copy($scope.p.tone2, $scope.p.ed);
+    }
+    $scope.generate();
+  }
+
   $scope.play = function() {
-    // TODO (優先度低)generatedMmlから$scope.pへの反映と、$scope.p.previewPhraseへの反映。
+    // TODO (優先度低)generatedMmlから$scope.pへの反映と、$scope.p.ed.previewPhraseへの反映。
     SIOPM.compile($scope.generatedMml);
   }
 
