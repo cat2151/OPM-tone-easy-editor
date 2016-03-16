@@ -117,7 +117,7 @@ function($scope, $location, $timeout, GeneratorService) {
 
 
   SIOPM.onLoad = function() {
-    if (angular.isString($scope.ed.previewPhrase)) {
+    if (angular.isString($scope.p.ed.previewPhrase)) {
       $timeout(function() {
         $scope.generate();
       }, 0);
