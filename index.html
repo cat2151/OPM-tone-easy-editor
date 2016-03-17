@@ -32,337 +32,337 @@
 
         <hr>
 
-          <span>ALG <input type="text" ng-model="p.ed.alg" ng-change="generate()" class="n1"></span>
+          <span>ALG <input type="text" ng-model="p.ed.alg" ng-change="generate()" ng-blur="generate()" class="n1"></span>
           <span ng-repeat="r in algRadios">
             <label>
-              <input type="radio" ng-model="p.ed.alg" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.alg" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
 
-          <span>FB <input type="text" ng-model="p.ed.fb" ng-change="generate()" class="n1"></span>
+          <span>FB <input type="text" ng-model="p.ed.fb" ng-change="generate()" ng-blur="generate()" class="n1"></span>
           <span ng-repeat="r in fbRadios">
             <label>
-              <input type="radio" ng-model="p.ed.fb" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.fb" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
 
-          <span>AR OP1 <input type="text" ng-model="p.ed.op0ar" ng-change="generate()" class="n2"></span>
+          <span>AR OP1 <input type="text" ng-model="p.ed.op0ar" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in arRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op0ar" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op0ar" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>AR OP2 <input type="text" ng-model="p.ed.op1ar" ng-change="generate()" class="n2"></span>
+          <span>AR OP2 <input type="text" ng-model="p.ed.op1ar" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in arRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op1ar" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op1ar" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>AR OP3 <input type="text" ng-model="p.ed.op2ar" ng-change="generate()" class="n2"></span>
+          <span>AR OP3 <input type="text" ng-model="p.ed.op2ar" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in arRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op2ar" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op2ar" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>AR OP4 <input type="text" ng-model="p.ed.op3ar" ng-change="generate()" class="n2"></span>
+          <span>AR OP4 <input type="text" ng-model="p.ed.op3ar" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in arRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op3ar" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op3ar" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
 
-          <span>DR OP1 <input type="text" ng-model="p.ed.op0dr" ng-change="generate()" class="n2"></span>
+          <span>DR OP1 <input type="text" ng-model="p.ed.op0dr" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in drRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op0dr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op0dr" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>DR OP2 <input type="text" ng-model="p.ed.op1dr" ng-change="generate()" class="n2"></span>
+          <span>DR OP2 <input type="text" ng-model="p.ed.op1dr" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in drRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op1dr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op1dr" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>DR OP3 <input type="text" ng-model="p.ed.op2dr" ng-change="generate()" class="n2"></span>
+          <span>DR OP3 <input type="text" ng-model="p.ed.op2dr" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in drRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op2dr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op2dr" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>DR OP4 <input type="text" ng-model="p.ed.op3dr" ng-change="generate()" class="n2"></span>
+          <span>DR OP4 <input type="text" ng-model="p.ed.op3dr" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in drRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op3dr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op3dr" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
 
-          <span>SR OP1 <input type="text" ng-model="p.ed.op0sr" ng-change="generate()" class="n2"></span>
+          <span>SR OP1 <input type="text" ng-model="p.ed.op0sr" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in srRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op0sr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op0sr" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>SR OP2 <input type="text" ng-model="p.ed.op1sr" ng-change="generate()" class="n2"></span>
+          <span>SR OP2 <input type="text" ng-model="p.ed.op1sr" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in srRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op1sr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op1sr" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>SR OP3 <input type="text" ng-model="p.ed.op2sr" ng-change="generate()" class="n2"></span>
+          <span>SR OP3 <input type="text" ng-model="p.ed.op2sr" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in srRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op2sr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op2sr" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>SR OP4 <input type="text" ng-model="p.ed.op3sr" ng-change="generate()" class="n2"></span>
+          <span>SR OP4 <input type="text" ng-model="p.ed.op3sr" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in srRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op3sr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op3sr" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
 
-          <span>RR OP1 <input type="text" ng-model="p.ed.op0rr" ng-change="generate()" class="n2"></span>
+          <span>RR OP1 <input type="text" ng-model="p.ed.op0rr" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in rrRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op0rr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op0rr" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>RR OP2 <input type="text" ng-model="p.ed.op1rr" ng-change="generate()" class="n2"></span>
+          <span>RR OP2 <input type="text" ng-model="p.ed.op1rr" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in rrRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op1rr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op1rr" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>RR OP3 <input type="text" ng-model="p.ed.op2rr" ng-change="generate()" class="n2"></span>
+          <span>RR OP3 <input type="text" ng-model="p.ed.op2rr" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in rrRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op2rr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op2rr" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>RR OP4 <input type="text" ng-model="p.ed.op3rr" ng-change="generate()" class="n2"></span>
+          <span>RR OP4 <input type="text" ng-model="p.ed.op3rr" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in rrRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op3rr" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op3rr" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
 
-          <span>SL OP1 <input type="text" ng-model="p.ed.op0sl" ng-change="generate()" class="n2"></span>
+          <span>SL OP1 <input type="text" ng-model="p.ed.op0sl" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in slRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op0sl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op0sl" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>SL OP2 <input type="text" ng-model="p.ed.op1sl" ng-change="generate()" class="n2"></span>
+          <span>SL OP2 <input type="text" ng-model="p.ed.op1sl" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in slRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op1sl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op1sl" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>SL OP3 <input type="text" ng-model="p.ed.op2sl" ng-change="generate()" class="n2"></span>
+          <span>SL OP3 <input type="text" ng-model="p.ed.op2sl" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in slRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op2sl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op2sl" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>SL OP4 <input type="text" ng-model="p.ed.op3sl" ng-change="generate()" class="n2"></span>
+          <span>SL OP4 <input type="text" ng-model="p.ed.op3sl" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in slRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op3sl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op3sl" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
 
-          <span>TL OP1 <input type="text" ng-model="p.ed.op0tl" ng-change="generate()" class="n2"></span>
+          <span>TL OP1 <input type="text" ng-model="p.ed.op0tl" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in tlRadios">
             <label class="tl">
-              <input type="radio" ng-model="p.ed.op0tl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op0tl" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>TL OP2 <input type="text" ng-model="p.ed.op1tl" ng-change="generate()" class="n2"></span>
+          <span>TL OP2 <input type="text" ng-model="p.ed.op1tl" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in tlRadios">
             <label class="tl">
-              <input type="radio" ng-model="p.ed.op1tl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op1tl" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>TL OP3 <input type="text" ng-model="p.ed.op2tl" ng-change="generate()" class="n2"></span>
+          <span>TL OP3 <input type="text" ng-model="p.ed.op2tl" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in tlRadios">
             <label class="tl">
-              <input type="radio" ng-model="p.ed.op2tl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op2tl" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>TL OP4 <input type="text" ng-model="p.ed.op3tl" ng-change="generate()" class="n2"></span>
+          <span>TL OP4 <input type="text" ng-model="p.ed.op3tl" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in tlRadios">
             <label class="tl">
-              <input type="radio" ng-model="p.ed.op3tl" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op3tl" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
 
-          <span>KS OP1 <input type="text" ng-model="p.ed.op0ks" ng-change="generate()" class="n2"></span>
+          <span>KS OP1 <input type="text" ng-model="p.ed.op0ks" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in ksRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op0ks" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op0ks" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>KS OP2 <input type="text" ng-model="p.ed.op1ks" ng-change="generate()" class="n2"></span>
+          <span>KS OP2 <input type="text" ng-model="p.ed.op1ks" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in ksRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op1ks" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op1ks" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>KS OP3 <input type="text" ng-model="p.ed.op2ks" ng-change="generate()" class="n2"></span>
+          <span>KS OP3 <input type="text" ng-model="p.ed.op2ks" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in ksRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op2ks" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op2ks" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>KS OP4 <input type="text" ng-model="p.ed.op3ks" ng-change="generate()" class="n2"></span>
+          <span>KS OP4 <input type="text" ng-model="p.ed.op3ks" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in ksRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op3ks" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op3ks" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
 
-          <span>MUL OP1 <input type="text" ng-model="p.ed.op0mul" ng-change="generate()" class="n2"></span>
+          <span>MUL OP1 <input type="text" ng-model="p.ed.op0mul" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in mulRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op0mul" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op0mul" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>MUL OP2 <input type="text" ng-model="p.ed.op1mul" ng-change="generate()" class="n2"></span>
+          <span>MUL OP2 <input type="text" ng-model="p.ed.op1mul" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in mulRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op1mul" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op1mul" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>MUL OP3 <input type="text" ng-model="p.ed.op2mul" ng-change="generate()" class="n2"></span>
+          <span>MUL OP3 <input type="text" ng-model="p.ed.op2mul" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in mulRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op2mul" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op2mul" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>MUL OP4 <input type="text" ng-model="p.ed.op3mul" ng-change="generate()" class="n2"></span>
+          <span>MUL OP4 <input type="text" ng-model="p.ed.op3mul" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in mulRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op3mul" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op3mul" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
 
-          <span>DT1 OP1 <input type="text" ng-model="p.ed.op0dt1" ng-change="generate()" class="n2"></span>
+          <span>DT1 OP1 <input type="text" ng-model="p.ed.op0dt1" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in dt1Radios">
             <label>
-              <input type="radio" ng-model="p.ed.op0dt1" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op0dt1" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>DT1 OP2 <input type="text" ng-model="p.ed.op1dt1" ng-change="generate()" class="n2"></span>
+          <span>DT1 OP2 <input type="text" ng-model="p.ed.op1dt1" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in dt1Radios">
             <label>
-              <input type="radio" ng-model="p.ed.op1dt1" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op1dt1" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>DT1 OP3 <input type="text" ng-model="p.ed.op2dt1" ng-change="generate()" class="n2"></span>
+          <span>DT1 OP3 <input type="text" ng-model="p.ed.op2dt1" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in dt1Radios">
             <label>
-              <input type="radio" ng-model="p.ed.op2dt1" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op2dt1" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>DT1 OP4 <input type="text" ng-model="p.ed.op3dt1" ng-change="generate()" class="n2"></span>
+          <span>DT1 OP4 <input type="text" ng-model="p.ed.op3dt1" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in dt1Radios">
             <label>
-              <input type="radio" ng-model="p.ed.op3dt1" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op3dt1" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
 
-          <span>DT2 OP1 <input type="text" ng-model="p.ed.op0dt2" ng-change="generate()" class="n2"></span>
+          <span>DT2 OP1 <input type="text" ng-model="p.ed.op0dt2" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in dt2Radios">
             <label>
-              <input type="radio" ng-model="p.ed.op0dt2" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op0dt2" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>DT2 OP2 <input type="text" ng-model="p.ed.op1dt2" ng-change="generate()" class="n2"></span>
+          <span>DT2 OP2 <input type="text" ng-model="p.ed.op1dt2" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in dt2Radios">
             <label>
-              <input type="radio" ng-model="p.ed.op1dt2" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op1dt2" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>DT2 OP3 <input type="text" ng-model="p.ed.op2dt2" ng-change="generate()" class="n2"></span>
+          <span>DT2 OP3 <input type="text" ng-model="p.ed.op2dt2" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in dt2Radios">
             <label>
-              <input type="radio" ng-model="p.ed.op2dt2" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op2dt2" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>DT2 OP4 <input type="text" ng-model="p.ed.op3dt2" ng-change="generate()" class="n2"></span>
+          <span>DT2 OP4 <input type="text" ng-model="p.ed.op3dt2" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in dt2Radios">
             <label>
-              <input type="radio" ng-model="p.ed.op3dt2" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op3dt2" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
 
-          <span>AMS OP1 <input type="text" ng-model="p.ed.op0ams" ng-change="generate()" class="n2"></span>
+          <span>AMS OP1 <input type="text" ng-model="p.ed.op0ams" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in amsRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op0ams" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op0ams" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>AMS OP2 <input type="text" ng-model="p.ed.op1ams" ng-change="generate()" class="n2"></span>
+          <span>AMS OP2 <input type="text" ng-model="p.ed.op1ams" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in amsRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op1ams" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op1ams" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>AMS OP3 <input type="text" ng-model="p.ed.op2ams" ng-change="generate()" class="n2"></span>
+          <span>AMS OP3 <input type="text" ng-model="p.ed.op2ams" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in amsRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op2ams" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op2ams" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
-          <span>AMS OP4 <input type="text" ng-model="p.ed.op3ams" ng-change="generate()" class="n2"></span>
+          <span>AMS OP4 <input type="text" ng-model="p.ed.op3ams" ng-change="generate()" ng-blur="generate()" class="n2"></span>
           <span ng-repeat="r in amsRadios">
             <label>
-              <input type="radio" ng-model="p.ed.op3ams" ng-change="generate()" value="{{r.id}}">{{r.name}}
+              <input type="radio" ng-model="p.ed.op3ams" ng-change="generate()" ng-blur="generate()" value="{{r.id}}">{{r.name}}
             </label>
           </span>
           <br/>
