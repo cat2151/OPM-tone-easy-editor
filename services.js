@@ -29,7 +29,7 @@ function() {
     return s;
   }
 
-  function pd(i) { // padding(¶–„‚ßA”¼Špspace)
+  function pd(i) { // padding(å·¦åŸ‹ã‚ã€åŠè§’space)
    var s = "  " + String(i);
    return s.substr(s.length - 3);
   }
