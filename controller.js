@@ -50,6 +50,16 @@ function($scope, $location, $timeout, GeneratorService) {
   $scope.dt2Radios = createRadios(0, 3, 1);
   $scope.amsRadios = createRadios(0, 3, 1);
 
+  $scope.algGraphs = [
+      "[#0]\n  |\n[#1]\n  |\n[#2]\n  |\n[#3]",
+      "[#1][#0]\n ＼  /\n  [#2] \n  [#3]",
+      "[#1]\n  |\n[#2][#0]\n  ＼ /\n  [#3]",
+      "    [#0]\n      |\n[#2][#1]\n  ＼ /\n  [#3]",
+      "[#2][#0]\n  |   |\n[#3][#1]",
+      "    [#0]\n   /  | ＼\n[#3][#2][#1]",
+      "        [#0]\n          |\n[#3][#2][#1]",
+      "[#3][#2][#1][#0]"];
+
   $scope.generate = function() {
     if ($scope.p.targetToneNum == 0) { // for URL
       angular.copy($scope.p.ed, $scope.p.tone1);

@@ -31,6 +31,8 @@
         <br/>
 
         <hr>
+          <textarea cols="20" rows="6" ng-model="algGraphs[p.ed.alg]"></textarea>
+          <br/>
 
           <span>ALG <input type="text" ng-model="p.ed.alg" ng-change="generate()" ng-blur="generate()" class="n1"></span>
           <span ng-repeat="r in algRadios">
@@ -366,6 +368,9 @@
             </label>
           </span>
           <br/>
+
+          <textarea cols="20" rows="6" ng-model="algGraphs[p.ed.alg]"></textarea>
+          <hr>
 
           <br/>
             <label>
